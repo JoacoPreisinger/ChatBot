@@ -2,9 +2,9 @@ import socket
 
 def main():
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    host = '127.0.0.1'
-    port = 12345
-    client_socket.connect((host, port))
+    host = '127.0.0.1' ##Aca se especifica la ip al que el cliente se va a conectar
+    port = 12345 ##Aca se especifica el puerto al que el cliente se va a conectar
+    client_socket.connect((host, port)) ##Esto sirve para que el cliente se conecte a la ip y al puerto 
 
     while True:
         message = input("Enter your message: ")
