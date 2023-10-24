@@ -10,6 +10,10 @@ def handle_client(client_socket):
         print(f"Received message: {message}")
         response = "Server received your message: " + message
         client_socket.sendall(response.encode('utf-8'))
+        message_2 = input("Enter your message as a server: ")
+        client_socket.sendall(message_2.encode('utf-8'))
+        data2 = client_socket.rcv(1024)
+        response2 = data.decode('utf-8')
     client_socket.close()
 
 def main():

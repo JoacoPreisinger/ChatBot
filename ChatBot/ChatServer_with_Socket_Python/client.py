@@ -12,6 +12,9 @@ def main():
         data = client_socket.recv(1024)
         response = data.decode('utf-8')
         print(f"Server response: {response}")
+        message2 = data.decode('utf-8')
+        print(f"Received message: "+message2)
+        client_socket.sendall(message2.encode('utf-8'))
 
 if __name__ == "__main__":
     main()
